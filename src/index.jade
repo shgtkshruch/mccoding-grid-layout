@@ -6,6 +6,16 @@ html(lang="ja")
     link(rel='stylesheet', href='styles/style.css', media='all')
   body
 
+    - items = {}
+    - items[0] = {image: 'image_S_1', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+
+    each item, i in items
+      section.item
+        a(href="#")
+          img.image(src="images/#{item.image}.jpg" alt="#{item.alt}")
+          .category= item.category
+          p.description= item.description
+
     // build:js scripts/vendor.js
     // bower:js
     // endbower
