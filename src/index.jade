@@ -7,19 +7,24 @@ html(lang="ja")
   body
 
     - items = {}
-    - items[0] = {class: 'maindish', image: 'image_S_1', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
-    - items[1] = {class: 'appetizer', image: 'image_S_2', alt: '前菜', category: 'APPETIZER', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'}
-    - items[2] = {class: 'column', image: 'image_S_3', alt: 'コラム', category: 'COLUMN', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
-    - items[3] = {class: 'breaktime', image: 'image_S_4', alt: 'おやつの時間', category: 'BREAK TIME', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'}
-    - items[4] = {class: 'maindish', image: 'image_S_5', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
-    - items[5] = {class: 'breaktime', image: 'image_S_6', alt: 'おやつの時間', category: 'BREAK TIME', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
-    - items[6] = {class: 'maindish', image: 'image_S_7', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt'}
-    - items[7] = {class: 'breaktime', image: 'image_S_8', alt: 'おやつの時間', category: 'BREAK TIME', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore'}
-    - items[8] = {class: 'column', image: 'image_S_9', alt: 'コラム', category: 'COLUMN', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'}
-    - items[9] = {class: 'maindish', image: 'image_S_10', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'}
+    - items[0] = {class: 'maindish', size: 'item-l', image: 'image_L_1', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+    - items[1] = {class: 'appetizer', size: 'item-m', image: 'image_M_1', alt: '前菜', category: 'APPETIZER', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+    - items[2] = {class: 'maindish', size: 'item-m', image: 'image_M_2', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+    - items[3] = {class: 'maindish', size: '', image: 'image_S_1', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+    - items[4] = {class: 'appetizer', size: '', image: 'image_S_2', alt: '前菜', category: 'APPETIZER', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'}
+    - items[5] = {class: 'breaktime', size: 'item-m', image: 'image_M_3', alt: 'おやつの時間', category: 'BREAK TIME', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt'}
+    - items[6] = {class: 'column', size: '', image: 'image_S_3', alt: 'コラム', category: 'COLUMN', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+    - items[7] = {class: 'breaktime', size: '', image: 'image_S_4', alt: 'おやつの時間', category: 'BREAK TIME', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'}
+    - items[8] = {class: 'maindish', size: '', image: 'image_S_5', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+    - items[9] = {class: 'breaktime', size: '', image: 'image_S_6', alt: 'おやつの時間', category: 'BREAK TIME', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
+    - items[10] = {class: 'maindish', size: '', image: 'image_S_7', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt'}
+    - items[11] = {class: 'breaktime', size: '', image: 'image_S_8', alt: 'おやつの時間', category: 'BREAK TIME', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore'}
+    - items[12] = {class: 'appetizer', size: 'item-m', image: 'image_M_4', alt: '前菜', category: 'APPETIZER', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt'}
+    - items[13] = {class: 'column', size: '', image: 'image_S_9', alt: 'コラム', category: 'COLUMN', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'}
+    - items[14] = {class: 'maindish', size: '', image: 'image_S_10', alt: 'メインディッシュ', category: 'MAIN DISH', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit'}
 
     each item, i in items
-      section.item(class="item-#{item.class}")
+      section.item(class="item-#{item.class} #{item.size}")
         a(href="#")
           img.image(src="images/#{item.image}.jpg" alt="#{item.alt}")
           .category= item.category
