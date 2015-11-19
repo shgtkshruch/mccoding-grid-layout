@@ -41,4 +41,28 @@
     margin: 10px;
     line-height: 1.5;
   }
+  &-maindish {
+    &,
+    & .category::before {
+      border-color: #ffc0cb;
+    }
+  }
+  &-appetizer {
+    &,
+    & .category::before {
+      border-color: #76c047;
+    }
+  }
+  &-column {
+    &,
+    & .category::before {
+      border-color: #fff100;
+    }
+  }
+  &-breaktime {
+    &,
+    & .category::before {
+      border-color: #c1efff;
+    }
+  }
 }
