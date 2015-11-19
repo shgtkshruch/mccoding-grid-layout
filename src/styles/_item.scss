@@ -20,6 +20,7 @@
   .image {
     display: block;
     width: 100%;
+    height: 109px;
   }
   .category {
     margin: 15px 9px 10px;
@@ -67,8 +68,14 @@
   }
   &-m {
     width: 364px;
+    .image {
+      height: 146px;
+    }
   }
   &-l {
     width: 732px;
+    .image {
+      height: 403px;
+    }
   }
 }
