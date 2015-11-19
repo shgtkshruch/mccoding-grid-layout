@@ -32,7 +32,6 @@ gulp.task 'wiredep', ->
 gulp.task 'html', ['jade'], ->
   assets = $.useref.assets()
   gulp.src config.dest + '/index.html'
-    .pipe wiredep()
     .pipe assets
     .pipe assets.restore()
     .pipe $.useref()
