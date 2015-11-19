@@ -2,4 +2,8 @@ header.header.item
   h1
     a(href="#")
       img.logo(src="images/logo.png" alt="SAMPLE SITE 2")
-
+  nav.nav
+    ul
+      each nav, i in ['HOME', 'ABOUT', 'MAIN DISH', 'APPETIZER', 'BREAK TIME', 'COLUMN', 'OTHER']
+        li.nav-item
+          a(href="#")= nav
