@@ -18,7 +18,8 @@
 each item, i in items
   section.item(class="item-#{item.class} #{item.size}")
     a(href="#")
-      img.image(src="images/#{item.image}.jpg" alt="#{item.alt}")
+      .image
+        img(src="images/#{item.image}.jpg" alt="#{item.alt}")
       .category= item.category
       p.description= item.description
 
